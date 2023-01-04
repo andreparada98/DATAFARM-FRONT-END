@@ -1,0 +1,17 @@
+
+@import 'constant';
+
+:host {
+  z-index: $z-index-actions;
+
+  position: fixed;
+  right: 30px;
+  top: calc($height-header + 20px);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-action {
+  margin-top: 20px;
+}

@@ -1,0 +1,24 @@
+
+@import 'constant';
+
+:host {
+  position: fixed;
+  background-color: #ffffff;
+  height: $height-header;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  z-index: $z-index-header;
+}
+
+.header-logo {
+  padding: 0 10px;
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 22px;
+  }
+}

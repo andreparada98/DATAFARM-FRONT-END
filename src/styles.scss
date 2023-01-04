@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@import 'styles/palette';
+@import './styles/colors';
+
+@include mat.core();
+
+
+$df-primary: mat.define-palette($mat-primary, 500);
+$df-accent: mat.define-palette($mat-accent, 700, 500, 300);
+$df-warn: mat.define-palette($mat-warn, 500);
+
+$df-theme: mat.define-light-theme((
+ color: (
+   primary: $df-primary,
+   accent: $df-accent,
+   warn: $df-warn,
+ ),
+));
+
+
+@include mat.all-component-themes($df-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
