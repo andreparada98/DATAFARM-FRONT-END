@@ -32,5 +32,6 @@ export class MapComponent {
 
     onMapReady(basemap: any) {
         this.mapService.map = basemap;
+        this.mapService.insertDemoField()
     }
 }

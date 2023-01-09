@@ -1,6 +1,6 @@
 
 import {Injectable} from '@angular/core';
-import {MapData} from "./map.model";
+import {DemoFeature, MapData} from "./map.model";
 import {Feature} from "geojson";
 import * as L from 'leaflet';
 import {PathOptions} from "leaflet";
@@ -47,5 +47,9 @@ export class MapService {
         L.geoJSON(feature, {
             style: style
         }).addTo(this._map)
+    }
+
+    insertDemoField() {
+        this.insertFeature(DemoFeature)
     }
 }

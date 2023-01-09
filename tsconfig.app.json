@@ -3,7 +3,10 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@map/*": ["./src/app/map/*"]
+    }
   },
   "files": [
     "src/main.ts"
