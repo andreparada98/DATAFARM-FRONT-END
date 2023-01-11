@@ -28,7 +28,7 @@ export class MapService {
     }
 
     /**
-     * The feature is a geometry, this geometry can be polygons or points.
+     * The feature is a geometry with properties, this geometry can be polygons or points.
      */
     insertFeature(feature: Feature | Feature[], style?: PathOptions): void {
 

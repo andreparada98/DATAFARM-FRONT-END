@@ -1,0 +1,12 @@
+<header>Set your code</header>
+
+<form class="form-auth">
+  <mat-form-field class="form-auth-field">
+    <mat-label>Code</mat-label>
+    <input type="text" matInput [formControl]="formControl" placeholder="Ex. 607abeb4-0161-4c3b-aa1f-3d65215c8b69">
+    <mat-error *ngIf="formControl.hasError('required')">
+      Code is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+<button mat-button mat-raised-button color="primary" (click)="onSubmit()">Login</button>

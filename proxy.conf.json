@@ -1,0 +1,11 @@
+{
+  "/api/*": {
+    "target": "https://job-opportunity.datafarm.app/api/",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

@@ -7,7 +7,7 @@
 @include mat.core();
 
 
-$df-primary: mat.define-palette($mat-primary, 500);
+$df-primary: mat.define-palette($mat-primary,  700, 500, 300);
 $df-accent: mat.define-palette($mat-accent, 700, 500, 300);
 $df-warn: mat.define-palette($mat-warn, 500);
 
