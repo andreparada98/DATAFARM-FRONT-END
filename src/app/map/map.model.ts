@@ -7,7 +7,7 @@ export type MapData = L.Map;
 
 export const DemoFeature: Feature = {
     type: 'Feature',
-    properties: {idField: 1},
+    properties: {idField: '2f306266-4e00-4334-a631-de489cea48d2'},
     geometry: {
         type: 'Polygon',
         coordinates: [[
