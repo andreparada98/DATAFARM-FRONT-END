@@ -1,27 +1,84 @@
-# Datafarm Frontend Job Opportunity
+# DataFarm Frontend Job Opportunity
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-## Development server
+### Bem vindo ao DataFarm!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este exercício visa conhecer melhor os seus conhecimento e habilidades como desenvolvedor.
 
-## Code scaffolding
+O projeto disponibilizado tem o propósito de servir como base para algumas atividades, que ao final serão encaminhadas e avaliadas.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Foi construído utilizando angular e possue 
+algumas bibliotecas como [Leaflet](https://leafletjs.com/) em seus componentes, a inclusão de 
+novos pacotes é permitido bem como é bem vinda.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Instalação do Projeto
 
-## Running end-to-end tests
+Execute `npm i` para instalar os pacotes, após execute `npm start`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Abra o navegador no endereço [localhost:4200](http://localhost:4200) e comece a codar!
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Atividades
+
+Quando entrar no endereço será aberto uma janela para adicionar o seu código 
+fornecido previamente ex: `172e77d8-6da8-4074-93d1-ede238f80785`.
+
+<img alt="insert-code" height="300" src="https://job.datafarm.app/doc/insert-code.png"/>
+
+Este código será encaminhado em todas as chamadas e é o que possibilida ter acesso as apis desta atividade.
+
+*Você poderá ver mais detalhes na implementação do inteceptor em* `src/app/core/application/interceptor/application.interceptor.ts`.
+
+*Também poderá ter acesso ao exemplo da aplicação base no endereço [job.datafarm.app](https://job.datafarm.app)*.
+
+### Atividade 1
+
+O mapa possui dois botões de ação e o contorno de um talhão (*inglês: Field* | **região dentro de uma fazenda**)
+
+<img alt="field-menu" height="200" src="https://job.datafarm.app/doc/field-menu.png"/>
+
+A atividade consiste em quando clicar no botão **verde** deverá abrir uma janela (*modal*) com as informações do 
+talhão como nome do Produtor (*grower*) da Fazenda (*Farm*) e do próprio talhão. Esta janela deverá ter um CRUD 
+destas informações e deverá fazer uso do endpoint `/api/field/{idField}` para recuperar e persistir os campos.
+Também deverá conter na janela um dashboard que pode ser consultado no endpoint `/api/field/{idField}/dashboard`.
+Este dashboard contém 3 gráficos:
+
+- `evolution`: **Gráfico de evolução de pragas** este gráfico deverá ser no formato de linhas.
+- `rain`: **Gráfico de chuva** este gráfico deverá ser no formato de barras e no eixo x deverá ser relativo aos dias que choveram.
+- `efficiency`: **Gráfico de eficiência produtiva** este gráfico deverá ser no formato de pizza.
+
+Exemplo do mock da Janela:
+
+<img alt="insert-code" height="500" src="https://job.datafarm.app/doc/modal.png"/>
+
+*Imagens reais do sistema para inspiração*:
+
+-------------------------------------
+
+<img alt="yieldgap" width="600" src="https://job.datafarm.app/doc/yieldgap-1.png"/>
+
+-------------------------------------
+
+<img alt="yieldgap" width="600" src="https://job.datafarm.app/doc/yieldgap-2.png"/>
+
+-------------------------------------
+
+<img alt="yieldgap" width="600" src="https://job.datafarm.app/doc/crop-window.png"/>
+
+
+### Atividade 2 
+
+##### (**Optional - Diferencial**)
+
+Adicionar os outros talhões da fazenda usando o endpoint `/api/farm`, 
+este endpoint irá retornar os outros contornos no formato GeoJSON no campo `fields`, 
+estes talhões devem ser ativados com o click sobre eles no mapa e deverá respeitar a lógica da atividade 1, 
+ou seja, quando clicar no botão **verde** deverá retornar o CRUD do talhão e o 
+dashbord daquele talhão selecionado. E o botão vermelho deverá remover o contorno daquele talhão do mapa.
+
+-----------------------
+
