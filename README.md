@@ -92,11 +92,13 @@ Para submeter as atividades faça o build do projeto com o comando:
 ```shell
 npm run build
 ```
-Acesse a pasta `./dist` e comprima em formato `.zip` a pasta `datafarm-frontend-job-opportunity`
+
+Remova a pasta `node_modules` e comprima o projeto todo em formato `.zip`,
+esta escolha para submissão das atividades garante a sua privacidade.
 
 Ex.: 
 ```shell
-cd ./dist/datafarm-frontend-job-opportunity
+rm -r node_modules
 zip -r datafarm-job-opportunity.zip .
 ``` 
 
