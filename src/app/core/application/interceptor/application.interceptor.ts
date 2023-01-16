@@ -18,7 +18,16 @@ export class ApplicationInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
         let headers = request.headers;
-        headers = headers.set('code', this.authService.code)
+
+        if (this.authService.code?.length > 0) {
+            headers = headers.set('code', this.authService.code);
+        }
+
+        if (request.body instanceof FormData) {
+            headers.set('Content-Type', 'multipart/form-data');
+        } else {
+            headers.set('Content-Type', 'application/json');
+        }
 
         const requestClone = request.clone({headers})
         return next.handle(requestClone);

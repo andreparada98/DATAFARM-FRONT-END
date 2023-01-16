@@ -1,0 +1,27 @@
+<section>
+    <img alt="crop" class="image-crop" src="assets/bg-login.png">
+    <div class="container">
+        <header>Submission</header>
+        <div class="divisor-height"></div>
+        <form class="form-code">
+            <mat-form-field class="code-field">
+                <mat-label>Code</mat-label>
+                <input type="text" matInput [formControl]="formControl"
+                       placeholder="Ex. 607abeb4-0161-4c3b-aa1f-3d65215c8b69">
+                <mat-error *ngIf="formControl.hasError('required')">
+                    Code is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </form>
+        <div class="divisor-height"></div>
+        <div class="choice-file">
+            <input type="file" (change)="onChangeFile($event)" placeholder="Upload file" accept=".zip">
+            <button
+                mat-flat-button
+                color="primary"
+                [disabled]="formControl.hasError('required') || !selectedFile()"
+                (click)="onSubmit()">Submit</button>
+        </div>
+        <div class="response-submit">{{messageSubmit || ''}}</div>
+    </div>
+</section>
