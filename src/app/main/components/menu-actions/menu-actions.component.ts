@@ -12,10 +12,12 @@ export class MenuActionsComponent {
     }
 
     openDashboard() {
-        console.log('Open Dashboard')
+        console.log('Open Dashboard');
+        console.log(`idField: ${this.mapService.activeField}`);
     }
 
     deleteField() {
-        console.log('Delete Field')
+        console.log('Delete Field');
+        console.log(`idField: ${this.mapService.activeField}`);
     }
 }

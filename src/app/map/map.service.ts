@@ -15,6 +15,8 @@ export class MapService {
     // @ts-ignore
     private _map: MapData;
 
+    public activeField: string | undefined;
+
     constructor() {
     }
 
@@ -50,6 +52,7 @@ export class MapService {
     }
 
     insertDemoField() {
-        this.insertFeature(DemoFeature)
+        this.insertFeature(DemoFeature);
+        this.activeField = DemoFeature.properties?.['idField'];
     }
 }
