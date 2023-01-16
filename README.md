@@ -57,6 +57,9 @@ Exemplo do mock da Janela:
 
 *Imagens reais do sistema para inspiração*:
 
+#### Fique livre pela escolha da biblioteca para os gráficos. 
+#### Os gráficos a seguir foram feitos com a biblioteca [Chart.js](https://www.chartjs.org/) 
+
 -------------------------------------
 
 <img alt="yieldgap" width="600" src="https://job.datafarm.app/doc/yieldgap-1.png"/>
@@ -82,3 +85,26 @@ dashbord daquele talhão selecionado. E o botão vermelho deverá remover o cont
 
 -----------------------
 
+# Submissão das atividades
+
+Para submeter as atividades faça o build do projeto com o comando:
+
+```shell
+npm run build
+```
+Acesse a pasta `./dist` e comprima em formato `.zip` a pasta `datafarm-frontend-job-opportunity`
+
+Ex.: 
+```shell
+cd ./dist/datafarm-frontend-job-opportunity
+zip -r datafarm-job-opportunity.zip .
+``` 
+
+Com o Arquivo `.zip` acesse [job.datafarm.app/submission](https://job.datafarm.app/submission),
+preencha com o seu código e carregue o arquivo zip. 
+
+<img alt="yieldgap" height="200" src="https://job.datafarm.app/doc/submission.png"/>
+
+Após submeter o arquivo zip, faça o pull request do seu código. 
+
+#### BOA SORTE!!!
