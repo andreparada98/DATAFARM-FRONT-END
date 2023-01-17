@@ -102,6 +102,7 @@ esta escolha para submissão das atividades garante a sua privacidade.
 
 Ex.: 
 ```shell
+npm run build
 rm -r node_modules
 zip -r datafarm-job-opportunity.zip .
 ``` 
