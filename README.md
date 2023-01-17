@@ -85,7 +85,7 @@ Adicionar os outros talhões da fazenda usando o endpoint `/api/farm`,
 este endpoint irá retornar os outros contornos no formato GeoJSON no campo `fields`, 
 estes talhões devem ser ativados com o click sobre eles no mapa e deverá respeitar a lógica da atividade 1, 
 ou seja, quando clicar no botão **verde** deverá retornar o CRUD do talhão e o 
-dashbord daquele talhão selecionado. E o botão vermelho deverá remover o contorno daquele talhão do mapa.
+dashboard daquele talhão selecionado. E o botão vermelho deverá remover o contorno daquele talhão do mapa.
 
 -----------------------
 
