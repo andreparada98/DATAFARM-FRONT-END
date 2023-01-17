@@ -103,10 +103,8 @@ zip -r datafarm-job-opportunity.zip .
 ``` 
 
 Com o Arquivo `.zip` acesse [job.datafarm.app/submission](https://job.datafarm.app/submission),
-preencha com o seu código e carregue o arquivo zip. 
+preencha com o seu código fornecido e carregue o arquivo zip. 
 
 <img alt="yieldgap" height="200" src="https://job.datafarm.app/doc/submission.png"/>
-
-Após submeter o arquivo zip, faça o pull request do seu código. 
 
 #### BOA SORTE!!!
