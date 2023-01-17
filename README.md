@@ -10,7 +10,7 @@ O projeto disponibilizado tem o propósito de servir como base para algumas ativ
 
 ### Projeto
 
-Foi construído utilizando angular e possue 
+Foi construído utilizando angular e possui 
 algumas bibliotecas como [Leaflet](https://leafletjs.com/) em seus componentes, a inclusão de 
 novos pacotes é permitido bem como é bem vinda.
 
@@ -35,6 +35,10 @@ Este código será encaminhado em todas as chamadas e é o que possibilida ter a
 
 *Também poderá ter acesso ao exemplo da aplicação base no endereço [job.datafarm.app](https://job.datafarm.app)*.
 
+*A documentação pode ser encontrada no endereço [job.datafarm.app/api/swagger](https://job.datafarm.app/api/swagger)*
+
+*Endpoint base para as apis - https://job.datafarm.app/api/*
+
 ### Atividade 1
 
 O mapa possui dois botões de ação e o contorno de um talhão (*inglês: Field* | **região dentro de uma fazenda**)
@@ -42,7 +46,7 @@ O mapa possui dois botões de ação e o contorno de um talhão (*inglês: Field
 <img alt="field-menu" height="200" src="https://job.datafarm.app/doc/field-menu.png"/>
 
 A atividade consiste em quando clicar no botão **verde** deverá abrir uma janela (*modal*) com as informações do 
-talhão como nome do Produtor (*grower*) da Fazenda (*Farm*) e do próprio talhão. Esta janela deverá ter um CRUD 
+talhão como nome do Produtor (*grower*) da Fazenda (*farm*) e do próprio talhão. Esta janela deverá ter um CRUD 
 destas informações e deverá fazer uso do endpoint `/api/field/{idField}` para recuperar e persistir os campos.
 Também deverá conter na janela um dashboard que pode ser consultado no endpoint `/api/field/{idField}/dashboard`.
 Este dashboard contém 3 gráficos:
