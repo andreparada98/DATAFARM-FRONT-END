@@ -27,7 +27,7 @@ Abra o navegador no endereço [localhost:4200](http://localhost:4200) e comece a
 Quando entrar no endereço será aberto uma janela para adicionar o seu código 
 fornecido previamente ex: `172e77d8-6da8-4074-93d1-ede238f80785`.
 
-<img alt="insert-code" height="300" src="https://job.datafarm.app/doc/insert-code.png"/>
+<img alt="insert-code" width="400" src="https://job.datafarm.app/doc/insert-code.png"/>
 
 Este código será encaminhado em todas as chamadas e é o que possibilida ter acesso as apis desta atividade.
 
@@ -43,7 +43,7 @@ Este código será encaminhado em todas as chamadas e é o que possibilida ter a
 
 O mapa possui dois botões de ação e o contorno de um talhão (*inglês: Field* | **região dentro de uma fazenda**)
 
-<img alt="field-menu" height="200" src="https://job.datafarm.app/doc/field-menu.png"/>
+<img alt="field-menu" width="300" src="https://job.datafarm.app/doc/field-menu.png"/>
 
 A atividade consiste em quando clicar no botão **verde** deverá abrir uma janela (*modal*) com as informações do 
 talhão como nome do Produtor (*grower*) da Fazenda (*farm*) e do próprio talhão. Esta janela deverá ter um CRUD 
@@ -57,7 +57,7 @@ Este dashboard contém 3 gráficos:
 
 Exemplo do mock da Janela:
 
-<img alt="insert-code" height="500" src="https://job.datafarm.app/doc/modal.png"/>
+<img alt="insert-code" width="600" src="https://job.datafarm.app/doc/modal.png"/>
 
 *Imagens reais do sistema para inspiração*:
 
@@ -109,6 +109,6 @@ zip -r datafarm-job-opportunity.zip .
 Com o Arquivo `.zip` acesse [job.datafarm.app/submission](https://job.datafarm.app/submission),
 preencha com o seu código fornecido e carregue o arquivo zip. 
 
-<img alt="yieldgap" height="200" src="https://job.datafarm.app/doc/submission.png"/>
+<img alt="yieldgap" width="350" src="https://job.datafarm.app/doc/submission.png"/>
 
 #### BOA SORTE!!!
