@@ -37,7 +37,7 @@ Este código será encaminhado em todas as chamadas e é o que possibilida ter a
 
 *A documentação pode ser encontrada no endereço [job.datafarm.app/api/swagger](https://job.datafarm.app/api/swagger)*
 
-*Endpoint base para as apis - https://job.datafarm.app/api/*
+*Endpoint base para as apis - https://job.datafarm.app/*
 
 ### Atividade 1
 
