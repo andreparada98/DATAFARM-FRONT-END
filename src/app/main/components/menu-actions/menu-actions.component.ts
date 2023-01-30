@@ -20,7 +20,6 @@ export class MenuActionsComponent {
     }
 
     deleteField() {
-        console.log('Delete Field');
-        console.log(`idField: ${this.mapService.activeField}`);
+        this.mapService.map.removeLayer(this.mapService.prevLayerClicked.target);
     }
 }

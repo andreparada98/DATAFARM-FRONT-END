@@ -16,7 +16,6 @@ export class DialogDashboardService {
     ) { }
 
     open(fieldId: string | undefined) {
-        console.log(fieldId)
         this.matDialog.open(DialogDashboardComponent, {
             width: '70vw',
             height: '80vh',

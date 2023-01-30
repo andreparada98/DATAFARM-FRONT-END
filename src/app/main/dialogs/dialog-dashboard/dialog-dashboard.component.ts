@@ -53,7 +53,6 @@ export class DialogDashboardComponent implements OnInit {
     let { axisX, axisY }: {axisX: [], axisY: []} = {axisX: [], axisY: []}
     let { rainAxisX, rainAxisY }: {rainAxisX: [], rainAxisY: []} = {rainAxisX: [], rainAxisY: []}
     this.dialogDashboardService.GetFieldChart(this.mapService.activeField).pipe(takeUntil(this.unsubscribe)).subscribe(res => {
-      console.log(res.data)
       res.data.evolution.data.forEach((res: any) => {
         axisX.push(res.x as never)
         axisY.push(res.y as never)
