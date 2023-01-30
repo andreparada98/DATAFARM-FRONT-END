@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
 import {MatDialogRef} from "@angular/material/dialog";
 import {FormControl, Validators} from "@angular/forms";
-import {AuthService} from "@auth/auth.service";
+import { AuthService } from 'src/app/auth/auth.service';
+import { MapService } from 'src/app/map/map.service';
 
 @Component({
     selector: 'app-dialog-auth',
@@ -15,6 +16,7 @@ export class DialogAuthComponent {
     constructor(
         public dialogRef: MatDialogRef<DialogAuthComponent>,
         private authService: AuthService,
+        private mapService: MapService
     ) {
     }
 
@@ -22,6 +24,10 @@ export class DialogAuthComponent {
         if (!this.formControl.hasError('required')) {
             this.authService.setCode(this.formControl.value)
             this.dialogRef.close();
+            this.dialogRef.afterClosed().subscribe(() => {
+               this.mapService.requestGeometryField()
+              });
         }
     }
+
 }

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {MapService} from '@map/map.service';
+import { MapService } from 'src/app/map/map.service';
+import { DialogDashboardService } from '../../dialogs/dialog-dashboard/services/dioalog-dashboard.service';
 
 @Component({
     selector: 'app-menu-actions',
@@ -8,12 +9,14 @@ import {MapService} from '@map/map.service';
 })
 export class MenuActionsComponent {
 
-    constructor(private mapService: MapService) {
+    constructor(
+        private mapService: MapService,
+        private dialogDashboardService: DialogDashboardService
+        ) {
     }
 
     openDashboard() {
-        console.log('Open Dashboard');
-        console.log(`idField: ${this.mapService.activeField}`);
+        this.dialogDashboardService.open(this.mapService.activeField);
     }
 
     deleteField() {

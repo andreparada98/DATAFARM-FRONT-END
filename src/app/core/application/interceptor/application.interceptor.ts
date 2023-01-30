@@ -6,7 +6,7 @@ import {
     HttpInterceptor
 } from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {AuthService} from '@auth/auth.service';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Injectable()
 export class ApplicationInterceptor implements HttpInterceptor {
@@ -18,7 +18,7 @@ export class ApplicationInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
         let headers = request.headers;
-
+        
         if (this.authService.code?.length > 0) {
             headers = headers.set('code', this.authService.code);
         }

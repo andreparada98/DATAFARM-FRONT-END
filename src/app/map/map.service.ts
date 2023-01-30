@@ -1,9 +1,11 @@
 
 import {Injectable} from '@angular/core';
-import {DemoFeature, MapData} from "./map.model";
+import {MapData} from "./map.model";
 import {Feature} from "geojson";
 import * as L from 'leaflet';
 import {PathOptions} from "leaflet";
+import { HttpClient } from '@angular/common/http';
+import { FieldModel } from './model/fieldArrayCordinate.dto';
 
 
 
@@ -17,7 +19,9 @@ export class MapService {
 
     public activeField: string | undefined;
 
-    constructor() {
+    constructor(
+        private httpClient: HttpClient
+    ) {
     }
 
     public get map(): MapData {
@@ -31,7 +35,7 @@ export class MapService {
 
     /**
      * The feature is a geometry with properties, this geometry can be polygons or points.
-     */
+      */
     insertFeature(feature: Feature | Feature[], style?: PathOptions): void {
 
         if (!Array.isArray(feature)) {
@@ -49,10 +53,19 @@ export class MapService {
         L.geoJSON(feature, {
             style: style
         }).addTo(this._map)
+            this.map.eachLayer((layer) => {
+                layer.on('click', (event) =>{
+                    if(event.target.feature.properties){
+                        this.activeField = event.target.feature.properties['idField'];
+                    }
+                })
+            });
     }
 
-    insertDemoField() {
-        this.insertFeature(DemoFeature);
-        this.activeField = DemoFeature.properties?.['idField'];
+
+    requestGeometryField(){
+        this.httpClient.get<FieldModel>('/api/farm').subscribe((res: FieldModel) => {
+            this.insertFeature(res.data.fields as Feature[])
+        })
     }
 }

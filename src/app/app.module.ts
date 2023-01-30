@@ -10,7 +10,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
-import {MapComponent} from '@map/map.component';
 import {ApplicationComponent} from './application/application.component';
 import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 import {MenuActionsComponent} from './main/components/menu-actions/menu-actions.component';
@@ -20,7 +19,8 @@ import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ApplicationInterceptor} from "./core/application/interceptor/application.interceptor";
 import { SubmissionComponent } from './main/submission/submission.component';
-
+import { MapComponent } from './map/map.component';
+import { DialogDashboardComponent } from './main/dialogs/dialog-dashboard/dialog-dashboard.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -30,6 +30,7 @@ import { SubmissionComponent } from './main/submission/submission.component';
         HeaderComponent,
         DialogAuthComponent,
         SubmissionComponent,
+        DialogDashboardComponent,
     ],
     imports: [
         BrowserModule,
@@ -41,7 +42,8 @@ import { SubmissionComponent } from './main/submission/submission.component';
         MatDialogModule,
         MatInputModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        
     ],
     providers: [{
         provide: HTTP_INTERCEPTORS,
